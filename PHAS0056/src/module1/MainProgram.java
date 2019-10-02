@@ -1,7 +1,9 @@
 package module1;
 
-public class MainProgram {
+import java.util.Date;	
 
+public class MainProgram {
+	
 	public static void main(String[] args) {
 		
 		System.out.println("Program starting");
