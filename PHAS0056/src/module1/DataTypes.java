@@ -19,6 +19,9 @@ public class DataTypes {
 		byte byteVar = 5;
 		System.out.println(byteVar);
 		
+		float floatVar2 = 5.3f;
+		
+		
 		// multiply each of these values by itself and print the result
 		
 		System.out.println(doubVar*doubVar);

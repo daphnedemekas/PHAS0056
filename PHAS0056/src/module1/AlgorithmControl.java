@@ -8,7 +8,7 @@ public class AlgorithmControl {
 	
 	void loop() {
 		
-		for (int i=1; i<9; i++) {
+		for (int i=1; i<=8; i++) {
 			System.out.println(i);
 		}
 	}
@@ -24,9 +24,9 @@ public class AlgorithmControl {
 	
 	void increment() {
 		double y = 25;
-		double z = 1;
+		double z = 0.1;
 		while ( y < 44) {
-			System.out.println(y/10);
+			System.out.println(y);
 			y += z;
 		}
 	}
