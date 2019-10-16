@@ -8,7 +8,7 @@ public class ParticleMain {
 		FallingParticle object = new FallingParticle(4.3,2.4);
 		
 		// set the initial height as 5. our h is static so accessed in a static way
-		FallingParticle.h = object.setH(5);
+		object.h = 5;
 		
 		// print the time elapsed for given delta T values
 		System.out.println(object.drop(0.5));

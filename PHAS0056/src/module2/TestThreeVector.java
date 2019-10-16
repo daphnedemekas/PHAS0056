@@ -8,7 +8,7 @@ public class TestThreeVector {
 		//create 3 three vectors
 		ThreeVector v1 = new ThreeVector(4,5,3);
 		ThreeVector v2 = new ThreeVector(1,4,2);
-		ThreeVector v3 = new ThreeVector(0,0,0);
+		ThreeVector v3 = ThreeVector.ZERO;
 		
 		//print the 3 vectors and their unit vectors
 		System.out.println("The vectors are");
@@ -16,11 +16,27 @@ public class TestThreeVector {
 		System.out.println(v2);
 		System.out.println(v3);
 		
+		// here i had to ammend these with try catch statements
 		System.out.println("The unit vectors are");
-		System.out.println(v1.unitVector());
-		System.out.println(v2.unitVector());
-		System.out.println(v3.unitVector());
+		try {System.out.println(v1.unitVector());
+		}
+		catch (Exception e) {
+			System.out.println("Error: zero vector");
+		}
+		
+		try {System.out.println(v2.unitVector());
+		}
+		catch (Exception e) {
+			System.out.println("Error: zero vector");
+		}
+		
+		try {System.out.println(v3.unitVector());
+		}
+		catch (Exception e) {
+			System.out.println("Error: zero vector");
+		}
 		//the zero vector has no unit vector, can't divide by zero 
+		
 		
 		//the following prints the required non static scalar products 
 		System.out.println("the non static scalar products are");
@@ -45,13 +61,38 @@ public class TestThreeVector {
 		//the following prints the required non static angles
 		System.out.println("the non static angles are");
 
-		System.out.println(v1.angle(v2));
-		System.out.println(v1.angle(v3));
+		// again had to amend with try catch statements
+		try {
+			System.out.println(v1.angle(v2));
+		}
+		catch (Exception e){
+			System.out.println("Error: zero vector");
+		}
+		
+		try {
+			System.out.println(v1.angle(v3));
+		}
+		catch (Exception e) {
+			System.out.println("Error: zero vector");
+		}
 		
 		//prints the static angles
-		System.out.println("the non static angles are");
-		System.out.println(ThreeVector.angle(v1, v2));
-		System.out.println(ThreeVector.angle(v1, v3));
+		// ammended with try catch statements
+		System.out.println("the static angles are");
+
+		try {
+			System.out.println(ThreeVector.angle(v1, v2));
+		}
+		catch (Exception e) {
+			System.out.println("Error: zero vector");
+		}
+		
+		try {
+			System.out.println(ThreeVector.angle(v1, v3));
+		}
+		catch (Exception e) {
+			System.out.println("Error: zero vector");
+		}
 		//again, you get Nan when trying to divide by zero
 		
 		

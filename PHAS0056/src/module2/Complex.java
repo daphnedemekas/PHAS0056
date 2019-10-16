@@ -24,6 +24,8 @@ public class Complex {
 	// returns the argument of the complex number
 	double angle() {
 		return Math.atan(Im/Re);
+		// use atan 2 so that you can account for which quadrant you are in
+		
 	}
 	//returns the conjugate of the complex number
 	public Complex conjugate() {

@@ -5,6 +5,12 @@ public class ThreeVector {
 	
 	//input is three real numbers representing cartesian or polar coordinates
 
+	double x;
+	
+	double y;
+	
+	double z; 
+	// this stores the vector
 	
 	public ThreeVector(double x, double y, double z) {
 		this.x = x; 
@@ -12,15 +18,11 @@ public class ThreeVector {
 		this.z = z; 
 	}
 	
-	// this stores the vector
-	double x;
-			
-	double y;
-	
-	double z; 
-	
-	
 	//for calculating the magnitude of a vector
+	
+	// define the zero vector
+	static ThreeVector ZERO = new ThreeVector(0,0,0);
+
 	
 	double magnitude() { 
 		
@@ -30,14 +32,19 @@ public class ThreeVector {
 	}
 	
 	//returns a unit vector in the same direction as the vector in the input (by dividing each component by magnitude)
-	public ThreeVector unitVector() {
+	public ThreeVector unitVector() throws Exception{
+		double mag = magnitude();
+
+		// add exception for zero vector
+		if (mag == 0) {
+			throw new Exception("division by zero");
+		}
+		double unit_x = x / mag;
 		
-		double unit_x = x / magnitude();
+		double unit_y = y / mag;
 		
-		double unit_y = y / magnitude();
-		
-		double unit_z = z / magnitude();
-		
+		double unit_z = z / mag;
+		// better to store magnitude first
 		return new ThreeVector(unit_x, unit_y, unit_z);
 	}
 	// returns as a string the components of the vector
@@ -67,8 +74,14 @@ public class ThreeVector {
 		return v;
 	}
 	// return the angle in radians between the two input vectors 
-	public static double angle(ThreeVector v1, ThreeVector v2) {
-		double cosine = scalarProduct(v1, v2) / (v1.magnitude()*v2.magnitude());
+	public static double angle(ThreeVector v, ThreeVector u) throws Exception {
+		if (v == ZERO || u == ZERO) {
+		
+		// could also do if ((v.x == 0 && v.y == 0 && v.z == 0 ) || (u.x == 0 &&  u.y == 0 && u.z ==0))
+			
+			throw new Exception("division by zero");
+		}
+		double cosine = scalarProduct(v, u) / (v.magnitude()*u.magnitude());
 		double radian = Math.acos(cosine);
 		return radian;
 	}
@@ -86,7 +99,10 @@ public class ThreeVector {
 		return add(this, v1);
 	}
 	//calculates the angle between vectros
-	public double angle(ThreeVector v1) {
+	public double angle(ThreeVector v1) throws Exception {
+		if (v1 == ZERO || this == ZERO) {
+			throw new Exception("division by zero");
+		}
 		return angle(this, v1);
 	}
 	
@@ -97,4 +113,5 @@ public class ThreeVector {
 		String myThreeVec = u.toString();
 		System.out.println(myThreeVec);
 	}
+	
 }

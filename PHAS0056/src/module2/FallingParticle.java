@@ -17,44 +17,41 @@ public class FallingParticle {
 	
 	double t; // time elapsed, changes (not static) and 
 	double z; // vertical position of particle, not static
-	static double h; // initial starting height can be static 
+	double h; // initial starting height 
 	double v; //velocity of particle, not static
 	final double g = 9.81; //acceleration due to gravity 
 	// g is final because it will never change 
 
 	//no equation for h, just set as itself
-	public double setH(double h) {
-		return h;
+	void setH(double h) {
+		this.h = h;
 	}
 	// function to get vertical position
 	double getZ(double z) {
 		return z;
 	}
 	// function to set velocity 
-	double setV(double u) {
-		return u;
+	void setV(double u) {
+		this.v = u;
 	}
 	// get v by setting initial v to be zero
+	
+	// fix this !!! 
 	double getV(double v) {
-		if (t == 0) {
-			return setV(0);
-		}
-		else {
 			return v;
 		}
-	}
 	// set t as initial time plus time elapsed 
 	static double getT(double t, double deltaT) {
-		return t += deltaT;
+		return t;
 	}
-	
+
 	//  this performs 1 time step
 	void doTimeStep(double deltaT) {
-		v = getV(v);
+		v = 0;
 		double a = (d*Math.pow(v, 2)/m)-g;
 		v += a*deltaT;
 		z += v*deltaT;
-		t = getT(t, deltaT);
+		t += deltaT;
 	}
 	// this performs time steps until our height above the ground is zero and retur
 	public double drop(double deltaT) {
@@ -67,5 +64,4 @@ public class FallingParticle {
 		System.out.print("Time Elapsed is ");
 		return t;
 	}
-	
 }
