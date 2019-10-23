@@ -10,7 +10,7 @@ public class TestExceptions {
 		
 		// First I will test the three vector methods
 		ThreeVector v1 = new ThreeVector(4,5,3);
-		ThreeVector v2 = ThreeVector.ZERO;
+		ThreeVector v2 = new ThreeVector(0,0,0);
 		// I use the definition of zero from the class  
 		
 		// testing the unit vector method for nonzero and zero vectors'

@@ -9,9 +9,8 @@ public class FallingParticle {
 		if (m <= 0) {
 			throw new Exception("unphysical mass" +m); 
 		}
-		else {
-			this.m = m;
-		}
+		this.m = m;
+
 		
 	}
 	//consider what values would be sensible defaults for other 
