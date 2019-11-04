@@ -12,6 +12,8 @@ import java.net.URL;
 public class NumericalReader {
 	
 	//here we declare our member variables
+	
+	//these should be doubles
 	private int minValue;
 	private int maxValue;
 	private long nValues;

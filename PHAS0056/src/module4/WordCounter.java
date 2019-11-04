@@ -42,12 +42,16 @@ public class WordCounter {
 		int countWord = 0;
 		// read the file line by line
 		while((line = dataAsBR.readLine()) != null) {
+			//need to add a way to skip line lengths 
+			
 			// create an array of words split by a whitespace delimiter
 			String[] wordList = line.split("\\s+"); 
+			//System.out.println(wordList);
+			System.out.println(wordList.length);
 			
 			//commented out code used to test whether its working
-	        //for (String a : wordList) 
-	        //    System.out.println(a); 
+	        for (String a : wordList) 
+	            System.out.println(a); 
 			
 			//add the number of words in the line to countWord
 			countWord += wordList.length; 
