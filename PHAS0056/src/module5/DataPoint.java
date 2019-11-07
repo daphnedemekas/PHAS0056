@@ -9,6 +9,7 @@ import java.util.Scanner;
 //defined as the sum over all data points of the quantity (ymeasured - ytheory)2 / ey2.
 
 public class DataPoint {
+	//initialize variables
 	double x;
 	double y;
 	double ey;
@@ -36,6 +37,6 @@ public class DataPoint {
 		}
 		DataPoint point = new DataPoint(numbers[0], numbers[1], numbers[2]);
 		return point;
-	} // FIX THIS WITHOUT THE ARRAY 
+	} 
 	
 }

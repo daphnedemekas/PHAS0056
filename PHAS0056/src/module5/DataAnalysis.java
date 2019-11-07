@@ -56,7 +56,7 @@ public class DataAnalysis {
 		double chi1 = goodnessOfFit(theory1,List);
 		System.out.println("For n=2:  " + chi1);
 		System.out.println("our data is a very bad estimate of the function x^2!");
-		
+		// test again for n = 4
 		Theory theory2 = new Theory(4);
 		double chi2 = goodnessOfFit(theory2,List);
 		System.out.println("For n=4:  " + chi2);
