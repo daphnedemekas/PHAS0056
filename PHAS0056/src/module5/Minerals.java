@@ -23,6 +23,7 @@ public class Minerals {
 		HashMap<Long, Double> massMap = m.SampleMass("http://www.hep.ucl.ac.uk/undergrad/3459/data/module5/module5-samples.txt");	
 		
 		//get the key of the maximum value in the hash map
+		
 		// this first finds the maximum mass and then uses the comparator to then retrieve the key of that maximum mass in the map
 		long heaviestMineral = Collections.max(massMap.entrySet(), Comparator.comparingDouble(Map.Entry::getValue)).getKey();
 		// this gets the maximum mass 

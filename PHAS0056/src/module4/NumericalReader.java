@@ -37,6 +37,7 @@ public class NumericalReader {
 			String directory = NumericalReader.getStringfromKeyboard();
 			saveFile = (directory +  File.pathSeparator + dataFile);
 			saveFile2 = (directory + File.pathSeparator + dataFile2);
+			System.out.println(saveFile);
 		}
 		//if it doesn't work, set directory to user.home
 		catch (Exception e) {
