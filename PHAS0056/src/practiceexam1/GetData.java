@@ -1,13 +1,13 @@
 package practiceexam1;
 
 import java.io.BufferedReader;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.*;
-import module5.DataPoint;
 
 public class GetData {
 	

@@ -8,7 +8,7 @@ import java.util.Scanner;
 //The goodness of fit between the function and the data is measured using the Χ2 (chi squared) statistic, 
 //defined as the sum over all data points of the quantity (ymeasured - ytheory)2 / ey2.
 
-public class DataPoint {
+class DataPoint {
 	//initialize variables
 	double x;
 	double y;

@@ -2,7 +2,7 @@ package practiceexam1;
 
 import java.util.ArrayList;
 
-import module5.DataPoint;
+
 
 public class Earthquake {
 	

@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.*;
 
-public class DataAnalysis {
+class DataAnalysis {
 
 	
 	//a static method dataFromURL(String url)
@@ -14,7 +14,7 @@ public class DataAnalysis {
 	ArrayList<DataPoint> MyList;
 	//should i iniitalize this variable?
 
-	public static ArrayList<DataPoint> dataFromURL(String url) throws Exception {
+	private static ArrayList<DataPoint> dataFromURL(String url) throws Exception {
 		ArrayList<DataPoint> MyList = new ArrayList<DataPoint>();
 		// first check if the string is a valid url
 		URL u = new URL(url);
@@ -42,7 +42,7 @@ public class DataAnalysis {
 			// difference is y measured - y theory
 			double diff  = data.y - theory.y(data.x); 
 			// sum the square of the difference over the square of the error
-			chi += (diff*diff / data.ey*data.ey);
+			chi += (diff*diff / (data.ey*data.ey));
 		}
 		return chi;
 	}
