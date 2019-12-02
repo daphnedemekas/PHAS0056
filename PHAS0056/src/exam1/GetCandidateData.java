@@ -9,8 +9,6 @@ import practiceexam1.Time;
 
 import java.util.*;
 
-import practiceexam3.Measurement;
-
 public class GetCandidateData {
 	// this class will get the data in the 'results' file
 

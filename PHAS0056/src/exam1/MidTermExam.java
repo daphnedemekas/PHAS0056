@@ -5,8 +5,6 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.awt.Point;
 
-import practiceexam3.GetData3;
-import practiceexam3.Measurement;
 
 public class MidTermExam {
 
@@ -77,7 +75,7 @@ public class MidTermExam {
 			// had to convert to long and double in order to get good answers
 			long r = (long) registered_voters;
 			long v = (long) votes_casted;
-			double turnout = (double) r / v;
+			double turnout = (double) v / r;
 
 			// print out the turnout
 			System.out.println("The turnout in the election is " + (turnout));
