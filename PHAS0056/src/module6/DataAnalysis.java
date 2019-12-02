@@ -69,6 +69,7 @@ public class DataAnalysis {
         	// iterate through the functions that we would like to test
         	
             double gof = gofCalculator.goodnessOfFit(data, theory);
+            System.out.println(theory + " " + gof);
             // calculate chi squared for this initial function 
             
             if (first) {
